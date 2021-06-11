@@ -1,6 +1,3 @@
 import json
+import discord
 
-with open('conf.json') as  e:
-    infos = e.json.load(e)
-    TOKEN = infos['toke']
-    prefix = infos['prefix']
