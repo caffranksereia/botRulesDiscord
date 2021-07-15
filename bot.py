@@ -3,8 +3,7 @@ import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
-import typing
-
+import rules
 
 
 load_dotenv()
@@ -21,16 +20,6 @@ async def on_ready():
         if guild.name == GUILD:
             break
         print(f'Entrei {client.user} Yes!,my lord \n {guild.name} (id:{guild.id})')
-
-@client.command()
-async def Sebas(ctx):
-    await ctx.send("Yes,my lord")
-
-
-@client.command()
-async def ban(ctx,members: commands.Greedy[discord.member],delete_days:typing.Optional[int]=0,*,reason:str):
-    for member in members:
-        await member.ban(delete_message_days = delete_days, reason=reason)
 
 
 
