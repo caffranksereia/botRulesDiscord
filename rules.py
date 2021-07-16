@@ -1,5 +1,5 @@
-import discord
-from discord.ext import commands
+
+import random
 
 class adminSebas():
     def __init__(self,adminSebas):
@@ -8,12 +8,6 @@ class adminSebas():
 
 
 
-@client.command()
-async def Sebas(ctx):
-        await ctx.send("Yes,my lord")
 
-@client.command()
-async def ban(ctx, members: commands.Greedy[discord.member], delete_days: typing.Optional[int] = 0, *, reason: str):
-        for member in members:
-            await member.ban(delete_message_days=delete_days, reason=reason)
-
+    def new_vassorinha(self,numero):
+        new_user = random.randint(1,int(numero))
